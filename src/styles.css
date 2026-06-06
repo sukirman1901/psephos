@@ -1,0 +1,127 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: 8px;
+  --radius-md: 8px;
+  --radius-lg: 26px;
+  --radius-xl: 26px;
+  --radius-2xl: 26px;
+  --radius-3xl: 26px;
+  --radius-4xl: 26px;
+  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-lime: var(--lime);
+  --color-ink: var(--ink);
+  --color-cream: var(--cream);
+  --color-parchment: var(--parchment);
+  --color-stone: var(--stone);
+  --color-graphite: var(--graphite);
+  --color-charcoal: var(--charcoal);
+  --color-slate-border: var(--slate-border);
+  --color-signal: var(--signal);
+  --color-coral: var(--coral);
+  --color-mint: var(--mint);
+}
+
+:root {
+  --radius: 26px;
+
+  --lime: #beff50;
+  --ink: #14140f;
+  --cream: #f5f5eb;
+  --parchment: #fafaf5;
+  --stone: #d2d2c8;
+  --graphite: #6e6e64;
+  --charcoal: #30302a;
+  --slate-border: #919183;
+  --signal: #144fcc;
+  --coral: #eb3131;
+  --mint: #1dc479;
+
+  --background: #f5f5eb;
+  --foreground: #14140f;
+  --card: #ffffff;
+  --card-foreground: #14140f;
+  --popover: #ffffff;
+  --popover-foreground: #14140f;
+  --primary: #beff50;
+  --primary-foreground: #14140f;
+  --secondary: #fafaf5;
+  --secondary-foreground: #14140f;
+  --muted: #fafaf5;
+  --muted-foreground: #6e6e64;
+  --accent: #beff50;
+  --accent-foreground: #14140f;
+  --destructive: #eb3131;
+  --destructive-foreground: #ffffff;
+  --border: #d2d2c8;
+  --input: #d2d2c8;
+  --ring: #14140f;
+
+  --sidebar: #ffffff;
+  --sidebar-foreground: #14140f;
+  --sidebar-primary: #beff50;
+  --sidebar-primary-foreground: #14140f;
+  --sidebar-accent: #fafaf5;
+  --sidebar-accent-foreground: #14140f;
+  --sidebar-border: #d2d2c8;
+  --sidebar-ring: #14140f;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html, body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .display-tight {
+    line-height: 0.89;
+    letter-spacing: -0.03em;
+  }
+
+  .heading-tight {
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .label-wide {
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+  }
+
+  .no-shadow, .no-shadow * {
+    box-shadow: none !important;
+  }
+}
